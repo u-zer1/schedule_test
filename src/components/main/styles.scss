@@ -1,0 +1,98 @@
+.main {
+  width: 100%;
+  height: 20px;
+
+  .drag,
+  .empty,
+  .drag .list-row {
+    pointer-events: none;
+
+    & * {
+      pointer-events: auto;
+    }
+  }
+
+  .drag {
+    position: absolute;
+    left: 145px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    .list-row {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.list {
+  width: 100%;
+
+  &-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--item {
+      width: 145px;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      border: 1px solid black;
+    }
+  }
+}
+
+.main {
+  .haeder .list-row--item {
+    background-color: rgb(103, 238, 94);
+  }
+
+  .list-row--item {
+    background-color: rgb(0, 213, 255);
+  }
+
+  .cell-empty.list-row--item {
+    background-color: white;
+  }
+}
+
+.modal-content {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  select {
+    width: 100%;
+    padding: 5px;
+    background: #e2e2e2;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .button {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    background: #26bba5;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
